@@ -137,7 +137,7 @@ This section outlines planned enhancements to improve algorithm accuracy, real-w
 
 ---
 
-## 🏗️ Layout Flexibility & Testing
+## Layout Flexibility & Testing
 
 - **Custom Floor Plan Support**  
   Create a tool to import warehouse layouts (floor plans) into the simulation for better adaptability.
@@ -150,7 +150,7 @@ This section outlines planned enhancements to improve algorithm accuracy, real-w
 
 ---
 
-## ⚡ Performance & Usability
+## Performance & Usability
 
 - **Scalability Improvements**  
   Use efficient data structures and parallel processing to handle larger maps and more antennas faster.
@@ -164,7 +164,7 @@ This section outlines planned enhancements to improve algorithm accuracy, real-w
 
 ---
 
-## ✅ Summary Checklist
+## Summary Checklist
 
 - [ ] Tune optimization and signal parameters using real-world test data  
 - [ ] Add antenna placement constraints (e.g., wall distance, spacing)  
