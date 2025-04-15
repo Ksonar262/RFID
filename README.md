@@ -2,10 +2,10 @@
 
 ## Project Overview
 
-This project aims to optimize the placement of RFID antennas in a warehouse environment using Particle Swarm Optimization (PSO). The goal is to maximize the coverage area while minimizing interference between antennas. The project uses a simulation of signal propagation and considers wall reflections and critical zones for more accurate results. It is an application of optimization techniques in real-world scenarios like asset tracking in a warehouse setting.
+This project aims to optimize the placement of RFID antennas in indoor environment using Particle Swarm Optimization (PSO) and can be used as a proof of concept. The goal is to maximize the coverage area while minimizing interference between antennas. The project uses a simulation of signal propagation and considers wall reflections and critical zones for more accurate results. It is an application of optimization techniques in real-world scenarios like asset tracking in a hospital setting.
 
 ## Key Features
-- **RFID Antenna Placement**: Optimizes the placement of RFID antennas to achieve maximum coverage in a warehouse layout.
+- **RFID Antenna Placement**: Optimizes the placement of RFID antennas to achieve maximum coverage in a layout.
 - **Signal Propagation**: The algorithm simulates signal decay and wall reflections to estimate coverage.
 - **Critical Zone Adjustment**: Special adjustments are made for narrow or critical zones that require more coverage.
 - **Repulsion Penalty**: The PSO algorithm penalizes placements that are too close to avoid interference between antennas.
@@ -93,3 +93,84 @@ The code is divided into several key sections:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/RFID-Optimization.git
+2. Install Dependencies: Make sure you have Python 3 installed. Then, install the required dependencies using pip. In the project directory, run:
+   ```bash
+    pip install -r requirements.txt
+  This will install the necessary libraries, including numpy, matplotlib, and scipy.
+
+3. Run the Script: To run the optimization process, use the following command:
+    ```bash
+    python optimize_antenna_placement.py
+Review the Results: The script will display various visualizations, including:
+- Heatmap of coverage.
+- Map showing antenna overlap.
+- Optimized placement of antennas.
+- You can also modify the script to adjust parameters like the number of antennas, signal range, and other hyperparameters.
+- See how the fitness increases with iterations.
+
+# Future Improvements for RFID Antenna Optimization
+
+This section outlines planned enhancements to improve algorithm accuracy, real-world usability, and performance scalability.
+
+---
+
+##  Algorithm & Optimization Enhancements
+
+- **Dynamic Repulsion Handling**  
+  Refine the repulsion penalty by dynamically adjusting weights or experimenting with alternative decay models to reduce antenna overlap more effectively.
+
+- **Advanced Signal Propagation Models**  
+  Replace basic distance-based decay with more realistic signal propagation that includes materials, angles, and multi-path reflection behaviors.
+
+- **Adaptive or Hybrid Optimization Techniques**  
+  Enhance convergence and exploration by dynamically adjusting PSO parameters or integrating hybrid approaches like GA + PSO or Simulated Annealing.
+
+---
+
+## Parameter Tuning & Constraints
+
+- **Antenna Constraints**  
+  Enforce minimum distance between antennas and from obstacles/walls to mimic real deployment constraints.
+
+- **Labeling and Output Enhancements**  
+  Support for visual/ID labels on antennas and more informative outputs that aid real-world decision-making.
+
+---
+
+## 🏗️ Layout Flexibility & Testing
+
+- **Custom Floor Plan Support**  
+  Create a tool to import warehouse layouts (floor plans) into the simulation for better adaptability.
+
+- **Real-World Testing**  
+  Deploy and validate results in actual rooms/warehouses to compare simulated and real signal coverage.
+
+- **Optimize Antenna Count**  
+  Add functionality to estimate the minimum number of antennas needed for full coverage with performance-cost tradeoffs.
+
+---
+
+## ⚡ Performance & Usability
+
+- **Scalability Improvements**  
+  Use efficient data structures and parallel processing to handle larger maps and more antennas faster.
+
+- **Interactive Visualizations**  
+  Build a UI (e.g., with `Tkinter`, `Dash`, or `Bokeh`) for adjusting parameters and visualizing changes in real-time.
+
+- **Embedded/IoT Integration**  
+  Adapt solution for use on Raspberry Pi or similar devices for in-field setup and feedback.
+
+
+---
+
+## ✅ Summary Checklist
+
+- [ ] Tune optimization and signal parameters using real-world test data  
+- [ ] Add antenna placement constraints (e.g., wall distance, spacing)  
+- [ ] Implement custom floor plan import tool  
+- [ ] Enable real-world testing and validation  
+- [ ] Include output data to guide field deployment  
+- [ ] Estimate optimal number of antennas automatically  
+- [ ] Add optional antenna labels  
+- [ ] Support interactive dashboards or GUI  
